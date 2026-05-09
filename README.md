@@ -1,32 +1,46 @@
 # U.S. Economic Indicators Dashboard
 
-![U.S. Economic Indicators Dashboard](docs/dashboard_overview.png)
+## Skills Showcase
+This project demonstrates my ability to collect public data with Python, clean and structure it for analysis, model it in PostgreSQL, write SQL queries for comparison and trend analysis, and build an interactive Power BI dashboard. It reflects my ability to work through a full analytics workflow from raw data to final presentation.
 
 ## Introduction
-This project is an end-to-end data project where I used Python, SQL, and Power BI to explore major U.S. economic indicators over time. My goal was to build something that felt like a real analyst project from start to finish by collecting public data, cleaning it, storing it in a database, analyzing it with SQL, and turning it into an interactive dashboard.
+This is an end-to-end data project where I used Python, SQL, and Power BI to explore major U.S. economic indicators over time. My goal was to build something that felt like a real analyst project from start to finish by collecting public data, cleaning it, storing it in a database, analyzing it with SQL, and presenting it in an interactive dashboard.
 
-The dashboard focuses on how key economic indicators changed across U.S. presidential administrations and gives users the ability to filter by party, president, and economic indicator.
+The dashboard focuses on how key economic indicators changed across U.S. presidential administrations and allows users to filter by party, president, and indicator.
+
+## Dashboard Preview
+
+![U.S. Economic Indicators Dashboard](docs/dashboard_overview.png)
 
 ## Background
-I created this project to practice combining the three main tools I am learning: Python, SQL, and Power BI.
+I created this project to practice combining the three main tools I am actively learning:
 
-I wanted a project that would help me go beyond just building charts and actually work through the full process:
+- Python for data collection and cleaning
+- SQL for data modeling and analysis
+- Power BI for dashboard development
+
+I wanted a project that would help me go beyond building charts and work through the full process:
 - pulling data
 - cleaning data
 - modeling data
 - analyzing data
 - building a dashboard
 
-I chose U.S. economic indicators because they are public, meaningful, and work well for time-based analysis. I also wanted to explore how different indicators looked during Democratic and Republican administrations without trying to make causal claims. The goal of the project is descriptive analysis, not political argument.
+I chose U.S. economic indicators because they are public, meaningful, and work well for time-based analysis. I also wanted to compare how different indicators looked during Democratic and Republican administrations while keeping the analysis descriptive rather than making causal claims.
 
-The indicators included in Version 1 are:
-- Real GDP
-- Unemployment Rate
-- CPI (All Items)
-- Federal Funds Rate
-- S&P 500
-- Recession Indicator
-- Debt to GDP
+## Data Sources
+This project uses public economic data from the Federal Reserve Economic Data (FRED) platform.
+
+Version 1 includes these indicators:
+- **Real GDP** (`GDPC1`)
+- **Unemployment Rate** (`UNRATE`)
+- **CPI, All Items** (`CPIAUCSL`)
+- **Federal Funds Rate** (`FEDFUNDS`)
+- **S&P 500** (`SP500`)
+- **Recession Indicator** (`USREC`)
+- **Debt to GDP** (`FYGFGDQ188S`)
+
+Presidential administration dates were compiled into a separate administration reference file and used to assign each data point to the president and party in office at that time.
 
 ## Tools I Used
 **Python**  
@@ -49,7 +63,7 @@ In the SQL portion of the project, I explored questions like:
 - What was the average unemployment rate by party?
 - How did major indicators vary across administrations?
 
-These analysis steps helped me validate the dataset and also guided which visuals I chose to build in Power BI.
+These analysis steps helped me validate the dataset and directly informed the visuals used in the Power BI dashboard.
 
 ## Dashboard Features
 The Power BI dashboard includes:
@@ -60,25 +74,25 @@ The Power BI dashboard includes:
 - **President slicer**
 - **Indicator slicer**
 
-The indicator slicer controls the trend chart so users can focus on one economic indicator at a time. The party and president slicers allow users to narrow the dashboard to specific administrations.
+The indicator slicer controls the trend chart so users can focus on one indicator at a time. The party and president slicers allow users to narrow the dashboard to specific administrations.
 
 ## What I Learned
 This project helped me strengthen several important skills:
 
 - pulling and cleaning public economic data with Python
-- organizing data for analysis in SQL
+- organizing time-series data for analysis
 - building fact and dimension tables in PostgreSQL
 - writing SQL queries for grouped comparisons
 - creating DAX measures in Power BI
-- designing dashboard interactions and slicers
-- thinking more carefully about how to present time series data clearly
+- designing slicer behavior and visual interactions
+- thinking more carefully about how to present time-series data clearly
 
-One thing I learned quickly is that not all indicators should be placed on the same visual at the same time. Indicators like GDP, unemployment, recession flags, and the S&P 500 have very different scales, so it is much better to let the user focus on one at a time when looking at trends.
+One thing I learned quickly is that not all indicators should be placed on the same chart at the same time. Indicators like GDP, unemployment, recession flags, and the S&P 500 operate on very different scales, so it is much more effective to let the user focus on one indicator at a time in the trend view.
 
 ## Conclusions
-This project gave me hands-on practice with the full analytics workflow using public data. It also helped me get more comfortable moving between Python, SQL, and Power BI in one connected project.
+This project gave me hands-on practice with the full analytics workflow using public data. It helped me get more comfortable moving between Python, SQL, and Power BI in one connected project and reinforced the importance of building clean, user-friendly dashboards.
 
-The final dashboard allows users to explore economic trends across presidential administrations in an interactive way, while keeping the analysis descriptive and easy to follow.
+The final result is an interactive dashboard that allows users to explore economic trends across presidential administrations while keeping the analysis descriptive, visual, and easy to follow.
 
 ## Transparency Statement
 This project is part of my learning journey toward becoming a data analyst.
@@ -96,6 +110,7 @@ US_Economic_Indicators_Project/
 │   └── cleaned/
 │
 ├── docs/
+│   └── dashboard_overview.png
 │
 ├── powerbi/
 │   └── US_Economic_Indicators_Dashboard.pbix
@@ -110,4 +125,5 @@ US_Economic_Indicators_Project/
 │   ├── load_data.sql
 │   └── analysis_queries.sql
 │
+├── requirements.txt
 └── README.md
