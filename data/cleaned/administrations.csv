@@ -1,0 +1,16 @@
+administration_id,president_name,party,start_date,end_date
+1,Harry S. Truman,Democrat,1945-04-12,1953-01-20
+2,Dwight D. Eisenhower,Republican,1953-01-20,1961-01-20
+3,John F. Kennedy,Democrat,1961-01-20,1963-11-22
+4,Lyndon B. Johnson,Democrat,1963-11-22,1969-01-20
+5,Richard Nixon,Republican,1969-01-20,1974-08-09
+6,Gerald Ford,Republican,1974-08-09,1977-01-20
+7,Jimmy Carter,Democrat,1977-01-20,1981-01-20
+8,Ronald Reagan,Republican,1981-01-20,1989-01-20
+9,George H. W. Bush,Republican,1989-01-20,1993-01-20
+10,Bill Clinton,Democrat,1993-01-20,2001-01-20
+11,George W. Bush,Republican,2001-01-20,2009-01-20
+12,Barack Obama,Democrat,2009-01-20,2017-01-20
+13,Donald Trump,Republican,2017-01-20,2021-01-20
+14,Joe Biden,Democrat,2021-01-20,2025-01-20
+15,Donald Trump,Republican,2025-01-20,2029-01-20
